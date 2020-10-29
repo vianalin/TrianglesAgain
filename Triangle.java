@@ -34,6 +34,18 @@ public class Triangle{
     	return "isosceles";
  	}
 
+ 	public String printPoint(Point p) { //helper function
+ 		return "(" + p.getX() + ", " + p.getY() + ")";
+ 	}
 
+ 	public String toString() {
+ 		return "v1" + printPoint(v1) + " v2" + printPoint(v2) + " v3" + printPoint(v3);
+ 	}
 
+ 	//c: one mutator
+ 	public void setVertex(int index, Point newP) {
+ 		if(index == 0) v1 = newP;
+ 		if(index == 1) v2 = newP;
+ 		v3 = newP;
+ 	}
 }
