@@ -7,6 +7,9 @@ public class Tester {
 		Triangle e = new Triangle(0, 0, 0, 0, 0, 0);
 		Triangle f = new Triangle(0, 0, 1, 3, 3, 1);
 		Triangle g = new Triangle(123, 532, 55, 66, 23, 1);
+		Point h = new Point(5, 19);
+		Point i = new Point(3, 4);
+		Triangle j = new Triangle(a, h, i);
 
 		//2.3
 		System.out.println(a.distanceTo(new Point(2, 2))); //a; testing distance 
@@ -23,7 +26,15 @@ public class Tester {
 		System.out.println(e.classify()); //equilateral
 		System.out.println(f.classify()); //isosceles
 		System.out.println(g.classify()); //scalene
-
+	
+		//testing toString & setVertex
+		System.out.println(j.toString());
+		j.setVertex(0, new Point(1, 1));
+		System.out.println(j.toString()); //testing index 0
+		j.setVertex(1, new Point(4, 5)); 
+		System.out.println(j.toString()); //testing index 1
+		j.setVertex(2, new Point(5, 5)); 
+		System.out.println(j.toString()); //testing index 2
 	}
 	
 }
