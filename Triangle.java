@@ -25,4 +25,15 @@ public class Triangle{
  		return Math.sqrt(perimeter * (perimeter - v1.distanceTo(v2)) * (perimeter - v2.distanceTo(v3)) * (perimeter - v3.distanceTo(v1)));
  	}
 
+ 	public String classify() {
+ 		double sideA = v1.distanceTo(v2);
+    	double sideB = v2.distanceTo(v3);
+   		double sideC = v3.distanceTo(v1);
+    	if(sideA == sideB && sideB == sideC && sideC == sideA) return "equilateral";
+    	if(sideA != sideB && sideB != sideC && sideC != sideA) return "scalene";
+    	return "isosceles";
+ 	}
+
+
+
 }
