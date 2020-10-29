@@ -20,4 +20,9 @@ public class Triangle{
  		return v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1);
  	}
 
+ 	public double getArea() {
+ 		double perimeter = getPerimeter() / 2;
+ 		return Math.sqrt(perimeter * (perimeter - v1.distanceTo(v2)) * (perimeter - v2.distanceTo(v3)) * (perimeter - v3.distanceTo(v1)));
+ 	}
+
 }
